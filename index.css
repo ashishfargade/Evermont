@@ -124,7 +124,7 @@ header nav a:hover {
 }
 
 main {
-    padding: 3% 7%;
+    padding: 5% 7%;
     max-width: 100%;
 }
 
@@ -140,30 +140,13 @@ main {
 #heroimage-container {
     display: flex;
     justify-content: center;
-    
+    position: relative;
 }
 
 
 /* 
-.gradient-bubble {
-    position: fixed;
-    left: 1%;
-    z-index: -1;
-    width: 25%; 
-    height: 100%;
-    background: radial-gradient(
-        circle, 
-        rgba(183, 240, 24, 0.8) 0%,
-        rgba(183, 240, 24, 0.7) 20%,   
-        rgba(183, 240, 24, 0.5) 40%,  
-        rgba(183, 240, 24, 0.3) 60%,  
-        rgba(183, 240, 24, 0.15) 70%, 
-        rgba(183, 240, 24, 0.08) 80%, 
-        rgba(183, 240, 24, 0.04) 85%, 
-        rgba(183, 240, 24, 0.02) 90%,  
-        rgba(183, 240, 24, 0.01) 95%,  
-        rgba(183, 240, 24, 0) 100%     
-    );
+.square-gradient {
+    
 }  
 */
 
@@ -195,10 +178,10 @@ main {
 
 }
 
-
+ /* Mobile hero */
 @media (max-width: 768px) {
     main {
-        padding-top: 6%;
+        padding-top: 10%;
     }
 
     .hero {
@@ -215,5 +198,94 @@ main {
     .syne-heading-1 {
         font-size: 200%;
         letter-spacing: 0.15ch;
+        padding-top: 5%;
     }
+
+    .opensans-heading-2{
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: 2.5ch;
+        margin-top: 0%;
+    }
+}
+
+/* about section */
+.about-container {
+    padding-top: 15%;
+    position: relative;
+}
+
+#about-heading{
+    font-family: "Syne";
+    font-size: 5ch;
+    letter-spacing: 0.1ch;
+}
+
+.about-body {
+    font-family: "Open Sans";
+    font-size: 3ch;
+    letter-spacing: 0.15ch;
+}
+
+.round-gradient{
+    position: absolute;
+    z-index: -10;
+    top: 30%;
+    right: 0%;
+}
+
+@media (max-width: 768px){
+
+    .about-container {
+        padding-top: 15%;
+    }
+    
+    #about-heading{
+        margin-top: 0%;
+    }
+
+    .about-body {
+        font-family: "Open Sans";
+        font-size: 2.5ch;
+        letter-spacing: 0.15ch;
+    }
+
+    .round-gradient{
+        top: -10%;
+        right: -10%;
+    }
+}
+
+/* explore section */
+.explore-container {
+    padding-top: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#explore-heading{
+    font-family: "Syne";
+    font-size: 5ch;
+    letter-spacing: 0.1ch;
+    margin-bottom: 0%;
+    text-align: center;
+}
+
+.explore-body {
+    font-family: "Open Sans";
+    font-size: 3ch;
+    letter-spacing: 0.15ch;
+    text-align: center;
+    
+}
+
+.explore-box {
+    
+}
+
+.content-heading{
+    font-family: "Syne";
+    font-weight: 700;
+    font-size: 3.2ch;
 }

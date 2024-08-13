@@ -2,7 +2,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1%;
+    padding: 0 2%;
     background-color: white;
     position: relative; /* For positioning the mobile menu */
 }
@@ -57,21 +57,30 @@ header nav a:hover {
 /* Nav menu - mobile */
 /* When the screen width is 768px or less */
 @media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Ensure space between logo/title and hamburger/menu */
+        align-items: center; /* Vertically center items */
+        position: relative; /* Make header the reference point for absolute positioning */
+    }
+    
     .frame-1 {
         display: none; /* Hide desktop menu */
     }
-
+    
     .frame-2 {
         display: flex; /* Show mobile menu container */
         align-items: center;
     }
-
+    
     #hamburger {
         display: flex;
-        padding-right: 10%;
+        align-items: center;
+        margin-left: auto; /* Push the hamburger icon to the right */
         cursor: pointer;
     }
-
+    
     #ham-icon {
         width: 30px; /* Adjust size of the hamburger icon */
         height: auto;
@@ -80,14 +89,14 @@ header nav a:hover {
     #nav-links {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 70px; /* Adjust based on header height */
+        position: fixed;
+        top: 70px; 
         right: 0px;
         left: 0px;
         background-color: white;
-        z-index: 1000; /* Ensure it appears above other content */
-        padding: 10px; /* Add padding for better spacing */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+        z-index: 1000;
+        padding: 10px; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     #nav-links a {
@@ -96,14 +105,14 @@ header nav a:hover {
         color: #333;
         font-weight: bold;
         text-decoration: none;
-        text-align: center; /* Center text for better appearance */
+        text-align: center; 
     }
 
     #nav-links #contact-button {
         padding: 10px 20px;
         background-color: #00113D;
         color: white;
-        border-radius: 4px; /* Match the border radius */
+        border-radius: 4px;
         text-decoration: none;
         display: flex;
         justify-content: center;
@@ -114,51 +123,97 @@ header nav a:hover {
     }
 }
 
-
-
-/* Main content */
 main {
-    text-align: center;
-    padding: 5%;
+    padding: 3% 7%;
+    max-width: 100%;
 }
 
-
-main .hero {
+.hero{
     display: flex;
     flex-direction: row;
-    align-items: center;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
+
+/* hero image */
+#heroimage-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+/* 
+.gradient-bubble {
+    position: fixed;
+    left: 1%;
+    z-index: -1;
+    width: 25%; 
+    height: 100%;
+    background: radial-gradient(
+        circle, 
+        rgba(183, 240, 24, 0.8) 0%,
+        rgba(183, 240, 24, 0.7) 20%,   
+        rgba(183, 240, 24, 0.5) 40%,  
+        rgba(183, 240, 24, 0.3) 60%,  
+        rgba(183, 240, 24, 0.15) 70%, 
+        rgba(183, 240, 24, 0.08) 80%, 
+        rgba(183, 240, 24, 0.04) 85%, 
+        rgba(183, 240, 24, 0.02) 90%,  
+        rgba(183, 240, 24, 0.01) 95%,  
+        rgba(183, 240, 24, 0) 100%     
+    );
+}  
+*/
+
 
 #heroimg {
-    border-radius: 35px;
-    box-shadow: 15px -15px 10px rgba(183, 240, 24, 0.8);    
+    border-radius: 25px;
+    box-shadow: -30px 10px 70px rgba(183, 240, 24, 0.8);
 }
 
+#hero-text {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 5%;
+    padding-right: 3%;
+}
 
 .syne-heading-1 {
-    font-family: "Syne", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    margin-top: 20px;
-    padding-left: 4%;
-    font-size: 320%;
+    font-family: "Syne";
     font-weight: 700;
+    font-size: 300%;
+    letter-spacing: 0.25ch;
 }
 
-main .hero h3 {
-    font-family: "Open Sans";
-    font-size: 20px;
+.opensans-heading-2{
+    font-family: 'Open Sans';
     font-weight: 600;
-    margin: 10px 0;
+
 }
 
-main .hero a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: 2px solid black;
-    text-decoration: none;
-    color: black;
-    border-radius: 5px;
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 6%;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #heroimg{
+        width: 80%;
+        box-shadow: -15px 4px 30px rgba(183, 240, 24, 0.8);
+    }
+
+    .syne-heading-1 {
+        font-size: 200%;
+        letter-spacing: 0.15ch;
+    }
 }

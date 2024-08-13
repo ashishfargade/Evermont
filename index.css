@@ -2,26 +2,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding: 0 1%;
     background-color: white;
-    position: relative; /* Add this to position mobile menu correctly */
+    position: relative; /* For positioning the mobile menu */
 }
 
 #header-div {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 #logo-img {
-    height: 73%;
+    height: 60px; /* Adjust height as needed */
     padding: 5%;
 }
 
 .syne-heading-2 {
     font-family: "Syne", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
 }
 
@@ -37,10 +34,10 @@ header {
 
 header nav a {
     font-family: "Open Sans";
-    font-size: 120%;
+    font-size: 1rem; /* Adjust font size */
     color: #333;
     font-weight: bold;
-    padding: 20px;
+    padding: 15px;
     text-decoration: none;
 }
 
@@ -53,7 +50,7 @@ header nav a:hover {
     padding: 10px 20px;
     background-color: #00113D;
     color: white;
-    border-radius: 0px;
+    border-radius: 4px; /* Slightly rounded corners */
     text-decoration: none;
 }
 
@@ -61,58 +58,62 @@ header nav a:hover {
 /* When the screen width is 768px or less */
 @media (max-width: 768px) {
     .frame-1 {
-        display: none; /* Hide frame-1 */
+        display: none; /* Hide desktop menu */
     }
 
     .frame-2 {
-        display: block; /* Show frame-2 */
+        display: flex; /* Show mobile menu container */
+        align-items: center;
     }
 
     #hamburger {
         display: flex;
         padding-right: 10%;
-        justify-content: flex-end;
         cursor: pointer;
     }
 
     #ham-icon {
-        width: 50%;
+        width: 30px; /* Adjust size of the hamburger icon */
+        height: auto;
     }
 
     #nav-links {
         display: none;
         flex-direction: column;
-        width: 40%;
-        justify-content: flex-end;
-        align-items: flex-end;
         position: absolute;
-        top: 70px; /* Adjust based on your header height */
-        right: 5%;
+        top: 70px; /* Adjust based on header height */
+        right: 0px;
+        left: 0px;
         background-color: white;
         z-index: 1000; /* Ensure it appears above other content */
+        padding: 10px; /* Add padding for better spacing */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
     }
 
     #nav-links a {
-        display: block;
         padding: 15px;
         font-family: "Open Sans";
         color: #333;
         font-weight: bold;
         text-decoration: none;
+        text-align: center; /* Center text for better appearance */
     }
 
     #nav-links #contact-button {
         padding: 10px 20px;
         background-color: #00113D;
         color: white;
-        border-radius: 0px;
+        border-radius: 4px; /* Match the border radius */
         text-decoration: none;
+        display: flex;
+        justify-content: center;
     }
 
     #nav-links.active {
         display: flex;
     }
 }
+
 
 
 /* Main content */

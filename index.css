@@ -258,7 +258,8 @@ main {
 
 /* explore section */
 .explore-container {
-    padding: 10% 5%;
+    padding: 0% 5%;
+    padding-top: 10%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -346,12 +347,10 @@ main {
 
 
 @media (max-width: 768px){
-
     .explore-box-1 {
         width: 80%;
         display: flex;
         flex-direction: column;
-
     }
 
     .explore-content {
@@ -378,4 +377,26 @@ main {
     #extra-content-5 {
         font-size: 2ch;
     }
+}
+
+.work-container {
+    padding: 0% 5%;
+    padding-top: 7%;
+}
+
+.work-desc {
+    font-family: "Open Sans";
+    font-size: 3ch;
+    letter-spacing: 0.15ch;
+}
+
+@media (max-width: 768px){
+    .work-container {
+        padding: 15% 5%;
+    }
+}
+
+.contact-container {
+    padding: 10%;
+    
 }

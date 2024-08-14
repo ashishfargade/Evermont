@@ -397,6 +397,81 @@ main {
 }
 
 .contact-container {
-    padding: 10%;
+    padding: 10% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#contactForm {
+    padding-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#contact-gradient {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+}
+
+.form-group{
+    width: 70%;
+}
+
+label {
+    display: none;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    margin: 2.5%;
+    padding: 2.5%;
+    border: none;
+    border-bottom: 3px solid black;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 3ch;
+    display: flex;
+    align-items: end;
+    text-align: start;
+}
+
+
+.send-button {
+    background-color: rgba(0, 3, 57, 1);
+    color: white;
+    width: 30%;
+    height: 48px;
+    margin-top: 5%;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 7px;
+}
+
+.send-button:hover {
     
+}
+
+@media (max-width: 768px){
+    
+    textarea {
+        width: 100%;
+        
+    }
+
+    #contact-gradient {
+        left: -60%;
+        top: -5%;
+    }
 }

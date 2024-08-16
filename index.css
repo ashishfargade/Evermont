@@ -464,15 +464,14 @@ textarea {
     cursor: pointer;
 }
 
-.send-button:hover {
-    
-}
 
 @media (max-width: 768px){
     
+    input[type="text"],
+    input[type="email"],
     textarea {
         width: 100%;
-        
+        font-size: 2.5ch;
     }
 
     #contact-gradient {
@@ -549,10 +548,35 @@ footer {
 }
 
 @media (max-width: 768px){
+
+    #f-logo {
+        justify-content: center;
+        align-content: center;
+    }
+
+    .footer-h3 {
+        margin: 5% 0%;
+    }
+
+    .f-text {
+        margin: 0%;
+    }
+
     #f-acn {
         display: flex;
         flex-direction: column;
         width: 100%;
         justify-content: space-between;
+        padding: 0% 2%;
+    }
+
+    #newsletter-tbox {
+        display: flex;
+        font-size: 3ch;
+        padding-bottom: 3.5%;
+    }
+
+    #socials {
+        padding-bottom: 10%;
     }
 }
